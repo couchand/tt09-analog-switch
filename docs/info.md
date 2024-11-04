@@ -9,12 +9,8 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+This is a basic analog switch.  When the control input is high, the X and Y analog inputs are connected.  When the control input is low, they are not connected.
 
 ## How to test
 
-Explain how to use your project
-
-## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Connect X to digital high.  Connect a pull-down resistor from Y to ground.  Change the value of the control input, and verify that the voltage at Y matches.

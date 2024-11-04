@@ -1,8 +1,12 @@
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg)
 
-# Tiny Tapeout Analog Project Template
+# Simple Analog Switch
 
 - [Read the documentation for project](docs/info.md)
+
+## What is this project?
+
+This is my attempt to layout a simple analog switch, as a submission for Tiny Tapeout.
 
 ## What is Tiny Tapeout?
 
