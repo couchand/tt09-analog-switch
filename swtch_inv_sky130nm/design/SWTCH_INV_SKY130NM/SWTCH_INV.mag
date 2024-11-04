@@ -1,0 +1,53 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1730745941
+<< locali >>
+rect -200 1020 200 1080
+rect -935 465 -845 500
+rect -560 465 -470 500
+rect -235 465 -145 500
+rect 140 465 230 500
+rect -900 -140 -500 -60
+<< metal1 >>
+rect -365 910 100 930
+rect -805 880 100 910
+rect -805 860 -320 880
+rect -740 690 -665 700
+rect -740 635 -730 690
+rect -675 635 -665 690
+rect -740 625 -665 635
+rect -40 690 35 700
+rect -40 635 -30 690
+rect 25 635 35 690
+rect -40 625 35 635
+rect -805 30 100 80
+<< via1 >>
+rect -730 635 -675 690
+rect -30 635 25 690
+<< metal2 >>
+rect -740 690 -665 700
+rect -40 690 35 700
+rect -740 635 -730 690
+rect -675 635 -30 690
+rect 25 635 35 690
+rect -740 625 -665 635
+rect -40 625 35 635
+use sky130_fd_pr__nfet_01v8_MNCXCV  sky130_fd_pr__nfet_01v8_MNCXCV_0
+timestamp 1730745536
+transform 1 0 -703 0 1 470
+box -297 -570 297 570
+use sky130_fd_pr__pfet_01v8_CVBGJ4  sky130_fd_pr__pfet_01v8_CVBGJ4_0
+timestamp 1730745536
+transform 1 0 -3 0 1 479
+box -297 -579 297 579
+<< labels >>
+rlabel locali -900 -140 -500 -80 1 GND
+port 2 n
+rlabel locali -200 1020 200 1080 1 VDD
+port 1 n
+rlabel metal2 -380 640 -320 680 1 OUT
+port 4 n
+rlabel metal1 -380 40 -320 80 1 IN
+port 3 n
+<< end >>

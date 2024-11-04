@@ -1,0 +1,12 @@
+** sch_path: /home/couch/dev/personal/chacha-silicon/tt09-analog-switch/swtch_switch_sky130nm/design/SWTCH_SWITCH_SKY130NM/SWTCH_SWITCH.sch
+.subckt SWTCH_SWITCH IN_N Y IN_P X VDD GND
+*.ipin IN_N
+*.iopin Y
+*.ipin IN_P
+*.iopin X
+*.ipin VDD
+*.ipin GND
+XM1 X IN_P Y VDD sky130_fd_pr__pfet_01v8 L=0.36 W=3.6 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'  ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 X IN_N Y GND sky130_fd_pr__nfet_01v8 L=0.36 W=3.6 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'  ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+.end

@@ -1,0 +1,90 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1730748259
+<< locali >>
+rect 480 970 1150 1020
+rect 710 920 1090 970
+rect -80 -210 280 -160
+rect -130 -270 540 -210
+<< metal1 >>
+rect -10 760 470 810
+rect -70 470 10 480
+rect -70 410 -60 470
+rect 0 410 10 470
+rect -70 400 10 410
+rect 190 470 270 480
+rect 190 410 200 470
+rect 260 410 270 470
+rect 190 400 270 410
+rect 60 220 140 230
+rect 60 160 70 220
+rect 130 160 140 220
+rect 60 150 140 160
+rect 420 -20 470 760
+rect -10 -70 470 -20
+rect 520 780 1010 830
+rect 520 -20 570 780
+rect 730 470 810 480
+rect 730 410 740 470
+rect 800 410 810 470
+rect 730 400 810 410
+rect 990 470 1070 480
+rect 990 410 1000 470
+rect 1060 410 1070 470
+rect 990 400 1070 410
+rect 860 220 940 230
+rect 860 160 870 220
+rect 930 160 940 220
+rect 860 150 940 160
+rect 520 -70 1010 -20
+<< via1 >>
+rect -60 410 0 470
+rect 200 410 260 470
+rect 70 160 130 220
+rect 740 410 800 470
+rect 1000 410 1060 470
+rect 870 160 930 220
+<< metal2 >>
+rect -70 470 10 480
+rect 190 470 270 480
+rect 730 470 810 480
+rect 990 470 1070 480
+rect -70 410 -60 470
+rect 0 410 200 470
+rect 260 410 740 470
+rect 800 410 1000 470
+rect 1060 410 1070 470
+rect -70 400 10 410
+rect 190 400 270 410
+rect 730 400 810 410
+rect 990 400 1070 410
+rect 60 220 140 230
+rect 860 220 940 230
+rect 60 160 70 220
+rect 130 160 870 220
+rect 930 160 940 220
+rect 60 150 140 160
+rect 860 150 940 160
+use sky130_fd_pr__nfet_01v8_5CE34N  sky130_fd_pr__nfet_01v8_5CE34N_0
+timestamp 1730748259
+transform 1 0 97 0 1 370
+box -297 -570 297 570
+use sky130_fd_pr__pfet_01v8_48NGR2  sky130_fd_pr__pfet_01v8_48NGR2_0
+timestamp 1730748259
+transform 1 0 897 0 1 379
+box -297 -579 297 579
+<< labels >>
+rlabel locali 480 970 530 1020 1 VDD
+port 1 n
+rlabel locali 490 -270 540 -220 1 GND
+port 2 n
+rlabel metal2 480 420 510 450 1 X
+port 3 n
+rlabel metal2 480 170 510 200 1 Y
+port 4 n
+rlabel metal1 430 770 460 800 1 IN_N
+port 5 n
+rlabel metal1 530 790 560 820 1 IN_P
+port 6 n
+<< end >>
