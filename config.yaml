@@ -1,0 +1,11 @@
+options:
+  template:
+    ip: ip_template.yaml
+  project: swtch
+  technology: sky130nm
+cpdk:
+  remote: git@github.com:wulffern/cpdk.git
+  revision: 0.1.1
+tech_sky130A:
+  remote: git@github.com:wulffern/tech_sky130A.git
+  revision: 0.1.0
