@@ -1,0 +1,43 @@
+magic
+tech sky130A
+timestamp 1730751262
+<< nwell >>
+rect 640 50 670 150
+rect 350 15 670 50
+rect 350 0 695 15
+<< locali >>
+rect 50 -20 250 10
+<< metal1 >>
+rect 295 -55 335 -50
+rect 295 -85 300 -55
+rect 330 -85 335 -55
+rect 360 -75 385 110
+rect 295 -90 335 -85
+<< via1 >>
+rect 300 -85 330 -55
+<< metal2 >>
+rect 300 -50 325 415
+rect 295 -55 335 -50
+rect 295 -85 300 -55
+rect 330 -85 335 -55
+rect 295 -90 335 -85
+use SWTCH_INV  SWTCH_INV_0 ~/dev/personal/chacha-silicon/tt09-analog-switch/swtch_inv_sky130nm/design/SWTCH_INV_SKY130NM
+timestamp 1730745941
+transform 1 0 500 0 1 70
+box -500 -70 147 540
+use SWTCH_SWITCH  SWTCH_SWITCH_0 ~/dev/personal/chacha-silicon/tt09-analog-switch/swtch_switch_sky130nm/design/SWTCH_SWITCH_SKY130NM
+timestamp 1730748259
+transform 1 0 100 0 1 -465
+box -100 -135 597 510
+<< labels >>
+rlabel space 310 500 335 525 1 ctrl
+port 1 n
+rlabel space 340 -255 355 -240 1 x
+port 2 n
+rlabel space 340 -380 355 -365 1 y
+port 3 n
+rlabel space 120 -595 135 -580 1 gnd
+port 4 n
+rlabel space 495 590 510 605 1 vdd
+port 5 n
+<< end >>

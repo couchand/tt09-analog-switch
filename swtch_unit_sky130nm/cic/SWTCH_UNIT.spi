@@ -1,0 +1,41 @@
+** sch_path: /home/couch/dev/personal/chacha-silicon/tt09-analog-switch/swtch_unit_sky130nm/design/SWTCH_UNIT_SKY130NM/SWTCH_UNIT.sch
+.subckt SWTCH_UNIT VDD CTRL GND X Y
+*.ipin VDD
+*.ipin CTRL
+*.ipin GND
+*.iopin X
+*.iopin Y
+x1 VDD CTRL net1 GND SWTCH_INV
+x2 VDD GND X CTRL net1 Y SWTCH_SWITCH
+.ends
+
+* expanding   symbol:
+*+  /home/couch/dev/personal/chacha-silicon/tt09-analog-switch/swtch_inv_sky130nm/design/SWTCH_INV_SKY130NM/SWTCH_INV.sym # of pins=4
+** sym_path: /home/couch/dev/personal/chacha-silicon/tt09-analog-switch/swtch_inv_sky130nm/design/SWTCH_INV_SKY130NM/SWTCH_INV.sym
+** sch_path: /home/couch/dev/personal/chacha-silicon/tt09-analog-switch/swtch_inv_sky130nm/design/SWTCH_INV_SKY130NM/SWTCH_INV.sch
+.subckt SWTCH_INV VDD IN OUT GND
+*.ipin VDD
+*.ipin GND
+*.ipin IN
+*.opin OUT
+XM1 OUT IN GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'  ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 OUT IN VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'  ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:
+*+  /home/couch/dev/personal/chacha-silicon/tt09-analog-switch/swtch_switch_sky130nm/design/SWTCH_SWITCH_SKY130NM/SWTCH_SWITCH.sym # of pins=6
+** sym_path: /home/couch/dev/personal/chacha-silicon/tt09-analog-switch/swtch_switch_sky130nm/design/SWTCH_SWITCH_SKY130NM/SWTCH_SWITCH.sym
+** sch_path: /home/couch/dev/personal/chacha-silicon/tt09-analog-switch/swtch_switch_sky130nm/design/SWTCH_SWITCH_SKY130NM/SWTCH_SWITCH.sch
+.subckt SWTCH_SWITCH VDD GND X IN_P IN_N Y
+*.ipin IN_N
+*.iopin Y
+*.ipin IN_P
+*.iopin X
+*.ipin VDD
+*.ipin GND
+XM1 X IN_P Y VDD sky130_fd_pr__pfet_01v8 L=0.36 W=3.6 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'  ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 X IN_N Y GND sky130_fd_pr__nfet_01v8 L=0.36 W=3.6 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'  ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.end
