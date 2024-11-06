@@ -1,0 +1,13 @@
+** sch_path: /home/couch/dev/personal/chacha-silicon/tt09-analog-switch/swtch_twoinv_sky130nm/design/SWTCH_TWOINV_SKY130NM/SWTCH_TWOINV.sch
+.subckt SWTCH_TWOINV VPWR IN Q_P Q_N VGND
+*.ipin VPWR
+*.ipin VGND
+*.ipin IN
+*.opin Q_P
+*.opin Q_N
+XM1 Q_N IN VPWR VPWR sky130_fd_pr__pfet_01v8 L=0.15 W=3 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'  ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 Q_N IN VGND VGND sky130_fd_pr__nfet_01v8 L=0.15 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'  ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM3 Q_P Q_N VPWR VPWR sky130_fd_pr__pfet_01v8 L=0.15 W=3 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'  ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM4 Q_P Q_N VGND VGND sky130_fd_pr__nfet_01v8 L=0.15 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'  ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+.end
