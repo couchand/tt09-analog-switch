@@ -23,8 +23,15 @@
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
-VSS  VSS  0     dc 0
-VDD  VDD_1V8  VSS  pwl 0 0 10n {AVDD}
+VGND VGND GND dc 0
+VPWR VPWR GND pwl 0 0 100p {AVDD}
+
+VP CTRL_P GND pwl 0 0 100p {AVDD}
+VN CTRL_N GND pwl 0 0 100p 0
+
+VX X GND pwl 0 0 100p {AVDD}
+
+IY Y GND pwl 0 0 1n 0 2n 100u
 
 *-----------------------------------------------------------------
 * DUT

@@ -1,0 +1,16 @@
+* Measure
+.control
+
+set t_end=8n
+load {cicname}.raw
+
+echo "MEAS_START"
+
+let rds_on = (v(x) - v(y)) / 100u
+meas tran rds_on find rds_on at=$t_end
+
+
+
+echo "MEAS_END"
+.endc
+
