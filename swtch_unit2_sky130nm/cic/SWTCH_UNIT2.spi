@@ -1,0 +1,46 @@
+** sch_path: /home/couch/dev/personal/chacha-silicon/tt09-analog-switch/swtch_unit2_sky130nm/design/SWTCH_UNIT2_SKY130NM/SWTCH_UNIT2.sch
+.subckt SWTCH_UNIT2 VPWR VGND CTRL X Y Q_P Q_N
+*.ipin VPWR
+*.ipin VGND
+*.ipin CTRL
+*.iopin X
+*.iopin Y
+*.opin Q_P
+*.opin Q_N
+x1 VPWR CTRL Q_P Q_N VGND SWTCH_TWOINV
+x2 VPWR X Q_P Q_N Y VGND SWTCH_GATE
+.ends
+
+* expanding   symbol:
+*+  /home/couch/dev/personal/chacha-silicon/tt09-analog-switch/swtch_twoinv_sky130nm/design/SWTCH_TWOINV_SKY130NM/SWTCH_TWOINV.sym # of pins=5
+** sym_path: /home/couch/dev/personal/chacha-silicon/tt09-analog-switch/swtch_twoinv_sky130nm/design/SWTCH_TWOINV_SKY130NM/SWTCH_TWOINV.sym
+** sch_path: /home/couch/dev/personal/chacha-silicon/tt09-analog-switch/swtch_twoinv_sky130nm/design/SWTCH_TWOINV_SKY130NM/SWTCH_TWOINV.sch
+.subckt SWTCH_TWOINV VPWR IN Q_P Q_N VGND
+*.ipin VPWR
+*.ipin VGND
+*.ipin IN
+*.opin Q_P
+*.opin Q_N
+XM1 Q_N IN VPWR VPWR sky130_fd_pr__pfet_01v8 L=0.15 W=3 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'  ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 Q_N IN VGND VGND sky130_fd_pr__nfet_01v8 L=0.15 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'  ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM3 Q_P Q_N VPWR VPWR sky130_fd_pr__pfet_01v8 L=0.15 W=3 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'  ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM4 Q_P Q_N VGND VGND sky130_fd_pr__nfet_01v8 L=0.15 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'  ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:
+*+  /home/couch/dev/personal/chacha-silicon/tt09-analog-switch/swtch_gate_sky130nm/design/SWTCH_GATE_SKY130NM/SWTCH_GATE.sym # of pins=6
+** sym_path: /home/couch/dev/personal/chacha-silicon/tt09-analog-switch/swtch_gate_sky130nm/design/SWTCH_GATE_SKY130NM/SWTCH_GATE.sym
+** sch_path: /home/couch/dev/personal/chacha-silicon/tt09-analog-switch/swtch_gate_sky130nm/design/SWTCH_GATE_SKY130NM/SWTCH_GATE.sch
+.subckt SWTCH_GATE VPWR X CTRL_P CTRL_N Y VGND
+*.ipin VPWR
+*.ipin VGND
+*.ipin CTRL_P
+*.ipin CTRL_N
+*.iopin X
+*.iopin Y
+XM3 Y CTRL_N X VPWR sky130_fd_pr__pfet_01v8_lvt L=0.35 W=94.5 nf=21 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'  pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM4 X CTRL_P Y VGND sky130_fd_pr__nfet_01v8_lvt L=0.15 W=31.5 nf=7 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'  pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.end

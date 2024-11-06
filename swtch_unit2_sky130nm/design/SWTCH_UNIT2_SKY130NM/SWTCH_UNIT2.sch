@@ -41,6 +41,9 @@ N -100 -480 -60 -480 {
 lab=Q_P}
 N -100 -620 -100 -480 {
 lab=Q_P}
+N -80 -580 -60 -580 {}
+N -80 -580 -80 -520 {}
+N -460 -520 -80 -520 {}
 C {cborder/border_s.sym} 520 0 0 0 {
 user="couch"
 company="couch"}
