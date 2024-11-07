@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1730835814
+timestamp 1730993132
 << locali >>
 rect 5400 12300 5550 12350
 rect 5400 12250 5450 12300
@@ -191,6 +191,10 @@ rect 9385 0 9475 100
 rect 11317 0 11407 100
 rect 13249 0 13339 100
 rect 15181 0 15271 100
+use FAMILY  FAMILY_0 ~/dev/personal/chacha-silicon/tt09-analog-switch
+timestamp 1730992266
+transform 1 0 2000 0 1 1000
+box 0 0 9990 7500
 use SWTCH_UNIT  SWTCH_UNIT_0 ~/dev/personal/chacha-silicon/tt09-analog-switch/swtch_unit_sky130nm/design/SWTCH_UNIT_SKY130NM
 timestamp 1730751262
 transform 1 0 6000 0 1 11600
